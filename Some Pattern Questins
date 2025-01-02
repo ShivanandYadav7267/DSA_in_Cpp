@@ -1,0 +1,181 @@
+/*11. Hollow square
+* * * * *
+*       *
+*       *
+* * * * *
+
+int main()
+{
+    int length;
+    cout << "How many length : ";
+    cin >> length;
+    // cout << "How many width : ";
+    // cin >> width;
+    for (int row = 0; row < length; row++)
+    {
+        for (int col = 0; col < length; col++)
+        {
+            if (row == 0 || row ==  length- 1)
+            {
+                cout << "* ";
+            }
+            else
+            {
+                if (col == 0 || col ==  length- 1)
+                {
+                    cout << "* ";
+                }
+                else{
+
+                    cout << "  ";
+                }
+            }
+        }
+        cout << endl;
+    }
+
+    return 0;
+}
+*/
+
+/*11. Hollow square
+* * * *
+*     *
+*     *
+* * * *
+int main()
+{
+    int n;
+    cout << "Give the number : ";
+    cin>> n;
+    for(int row = 0; row<n; row++ ){
+        for(int col=0; col<n; col++){
+            if(row == 0 || row == n-1 || col == 0 || col ==n-1){
+                cout << "* ";
+            }else{
+                cout << "  ";
+            }
+        }
+        cout << endl;
+    }
+
+
+    return 0;
+}
+*/
+
+/* 12.Hollow pyramid
+
+ *
+ * *
+ *   *
+ *     *
+ * * * * *
+
+int main()
+{
+    int n;
+    cout << "Give the number : ";
+    cin >> n;
+    for (int row = 0; row < n; row++)
+    {
+        for (int col = 0; col <= row; col++)
+        {
+            if (col == 0 || col == row || row == n - 1)
+            {
+                cout << "* ";
+            }
+            else
+            {
+                cout << "  ";
+            }
+        }
+        cout << endl;
+    }
+
+    return 0;
+}
+ */
+
+/* 13.Hollow Inverted half pyramid
+* * * * * 
+*     *
+*   *
+* *
+*
+
+int main()
+{
+    int num;
+    cout << "Give the number : ";
+    cin >> num;
+    for (int row = 1; row <= num; row++)
+    {
+        for (int col = 0; col <=num - row; col++)
+        {
+            if (col == 0 || row == 1 || col == num - row )
+            {
+                cout << "* ";
+            }
+            else
+            {
+                cout << "  ";
+            }
+        }
+        cout << endl;
+    }
+    return 0;
+}
+*/
+
+/* 14.Numeric half pyramid
+1
+12
+123
+1234
+12345
+123456
+
+int main()
+{
+    int n;
+    cout << "Give the number : ";
+    cin >> n;
+    for (int row = 1; row <= n; row++)
+    {
+        for (int col = 1; col <= row; col++)
+        {
+            cout << col << " " ;
+        }
+        cout << endl;
+    }
+
+    return 0;
+}
+*/
+
+/* 15. Inverted numeric half pyramid
+123456
+12345
+1234
+123
+12
+1
+
+int main()
+{
+    int n;
+    cout << "Give the number : ";
+    cin >> n;
+    for (int row = 0; row < n; row++)
+    {
+        for (int col = 0; col < n-row; col++)
+        {
+        cout << col+1 << " " ;
+        }
+        cout << endl;
+    }
+
+    return 0;
+}
+*/
