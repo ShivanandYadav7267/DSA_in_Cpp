@@ -1,0 +1,407 @@
+#include <iostream>
+using namespace std;
+
+/* 1.
+     *
+    * *
+   * * *
+  * * * *
+ * * * * *
+
+
+int main()
+{
+
+    int n;
+    cin >> n;
+
+    for (int row = 0; row < n; row++)
+    {
+        for (int col = 0; col < n - row - 1; col++)
+        {
+            cout << " ";
+        }
+        for (int star = 0; star < row + 1; star++)
+        {
+            cout << "* ";
+        }
+
+        cout << endl;
+    }
+    return 0;
+}
+*/
+/* 2.
+* * * * *
+ * * * *
+  * * *
+   * *
+    *
+
+int main(){
+
+int n;
+cout << " Take the number : " ;
+cin >> n;
+for(int row = 0; row<n; row++)
+{
+    for(int space = 0; space < row; space++)
+    {
+        cout << " ";
+            }
+
+        for(int col = 0; col< n - row ; col++)
+
+        {
+            cout << "* ";
+        }
+
+
+    cout << endl;
+}
+    return 0;
+}
+*/
+
+/* 3. Dimond Shape
+    *
+   * *
+  * * *
+ * * * *
+  * * *
+   * *
+    *
+
+int main()
+{
+
+    int n;
+    cout << " Take the number : ";
+    cin >> n;
+    for (int row = 0; row < n-1; row++)
+    {
+        for (int col = 0; col < n - row - 1; col++)
+        {
+            cout << " ";
+        }
+        for (int star = 0; star <= row ; star++)
+        {
+            cout << "* ";
+        }
+
+        cout << endl;
+    }
+
+    for (int row = 0; row < n; row++)
+    {
+        for (int space = 0; space < row; space++)
+        {
+            cout << " ";
+        }
+
+        for (int col = 0; col < n - row ; col++)
+
+        {
+            cout << "* ";
+        }
+
+        cout << endl;
+    }
+    return 0;
+}
+*/
+/* 4.
+      *
+     * *
+    *   *
+   *     *
+  *       *
+ *         *
+* * * * * * *
+
+int main() {
+
+    int n;
+    cout<< " Give the Number of rows : ";
+    cin>>n;
+
+for(int row=0; row<n; row++){
+    for(int col=0; col<n-row-1; col++){
+        cout << " ";
+    }
+    for(int star = 0; star<=row; star++){
+
+
+    if( star == 0 || star == row || row == n-1){
+        cout << "* ";
+    }else{
+        cout <<"  ";
+    }
+      }
+    cout << endl;
+}
+
+
+
+    return 0;
+}
+*/
+
+/* 5.
+* * * * *
+ *     *
+  *   *
+   * *
+    *
+
+int main() {
+
+    int n;
+    cout<< " Give the Number of rows : ";
+    cin>>n;
+
+for(int row=0; row<n; row++){
+    for(int col=0; col < row; col++){
+        cout << " ";
+    }
+    for(int star = 0; star< n; star++){
+    if( star == 0 || star == n-row -1 || row == 0){
+        cout << "* ";
+    }else{
+        cout <<"  ";
+    }
+      }
+    cout << endl;
+}
+
+
+
+    return 0;
+}
+*/
+
+/* 6. Hollow diamond
+    *
+   * *
+  *   *
+ *     *
+*       *
+ *     *
+  *   *
+   * *
+    *
+
+
+
+int main()
+{
+
+    int n;
+    cout << " Take the number : ";
+    cin >> n;
+    for (int row = 0; row < n - 1; row++)
+    {
+        for (int col = 0; col < n - row - 1; col++)
+        {
+            cout << " ";
+        }
+        for (int star = 0; star <= row; star++)
+
+        {
+            if (star == 0 || star == row)
+            {
+                cout << "* ";
+            }
+            else
+            {
+                cout << "  ";
+            }
+        }
+
+        cout << endl;
+    }
+
+    for (int row = 0; row < n; row++)
+    {
+        for (int col = 0; col < row; col++)
+        {
+            cout << " ";
+        }
+        for (int star = 0; star < n; star++)
+        {
+            if (star == 0 || star == n - row - 1)
+            {
+                cout << "* ";
+            }
+            else
+            {
+                cout << "  ";
+            }
+        }
+        cout << endl;
+    }
+    return 0;
+}
+*/
+
+/* 7. Mix Pyramid
+* * * * *   * * * * *
+* * * *       * * * *
+* * *           * * *
+* *               * *
+*                   *
+*                   *
+* *               * *
+* * *           * * *
+* * * *       * * * *
+* * * * *   * * * * *
+
+int main()
+{
+
+    int n;
+    cout << " Give the number of rows : ";
+    cin >> n;
+    for (int row = 0; row < n; row++)
+    {
+        for (int star11 = 0; star11 < n - row; star11++)
+        {
+            cout << "* ";
+        }
+        for (int space1 = 0; space1 < 2 * row + 1; space1++)
+        {
+            cout << "  ";
+        }
+        for (int star12 = 0; star12 < n - row; star12++)
+        {
+            cout << "* ";
+        }
+        cout << endl;
+    }
+    for (int row = 0; row < n; row++)
+    {
+        for (int star21 = 0; star21 < row + 1; star21++)
+        {
+            cout << "* ";
+        }
+        for (int space2 = 0; space2 < 2 * (n - row)-1; space2++)
+        {
+            cout << "  ";
+        }
+        for (int star22 = 0; star22 < row + 1; star22++)
+        {
+            cout << "* ";
+        }
+        cout << endl;
+    }
+    return 0;
+}
+ */
+/*  8. Fancy12 Pattern
+1
+2 * 2
+3 * 3 * 3
+4 * 4 * 4 * 4
+5 * 5 * 5 * 5 * 5
+
+int main()
+{
+    int n;
+    cout << "Give the number of rows : ";
+     cin >> n;
+    for (int row = 0; row < n; row++)
+    {
+
+        for (int col = 0; col < 2 * row + 1; col++)
+        {
+            if (col % 2 == 0)
+            {
+                cout << row + 1;
+            }
+            else
+            {
+                cout << " * ";
+            }
+        }
+        cout << endl;
+    }
+
+    return 0;
+}
+*/
+/* 9. fullFancy12 Pattern
+1
+2 * 2
+3 * 3 * 3
+2 * 2
+1
+
+int main()
+{
+    int n;
+    cout << "Give the number of rows : ";
+     cin >> n;
+    for (int row = 0; row < n; row++)
+    {
+
+        for (int col = 0; col < 2 * row + 1; col++)
+        {
+            if (col % 2 == 0)
+            {
+                cout << row + 1;
+            }
+            else
+            {
+                cout << " * ";
+            }
+        }
+        cout << endl;
+    }
+    n--;
+    for(int row =0; row<n; row++){
+        for(int print = 0; print< 2*(n-row)-1; print++){
+            if(print%2 == 0){
+                cout << n-row;
+            }else{
+                cout << " * ";
+            }
+
+        }
+        cout << endl;
+    }
+
+    return 0;
+}
+*/
+/* 10.
+A 
+A B A
+A B C B A
+A B C D C B A
+
+int main()
+{
+    int n;
+
+    cout << " Give the number of rows : ";
+    cin >> n;
+    for (int row = 0; row < n; row++)
+    {
+        char ch = 'A';
+        for (int col = 0; col < row + 1; col++)
+        {
+
+            cout << ch << " ";
+            ch++;
+        }
+        ch--;
+        while(ch> 'A'){
+             ch--;
+            cout << ch << " ";
+        }
+        cout << endl;
+    }
+
+    return 0;
+}
+*/
