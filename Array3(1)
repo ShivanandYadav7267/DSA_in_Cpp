@@ -1,0 +1,437 @@
+/*find maximum value in 2d array
+int findMinIn2DArray(int arr[][6], int rowsize, int columnsize){
+
+    int maxValue = INT16_MIN;
+
+    for(int i = 0; i<rowsize; i++){
+        for(int j = 0; j<columnsize; j++){
+            maxValue = max(arr[i][j], maxValue);
+        }
+    }
+
+return maxValue;
+}
+
+int main(){
+
+int arr[4][6] = {
+
+{24,54,644,34,232,25},
+{234,44,67,34,86,345},
+{32,234,34,34,85,67},
+{756,323,35,8,36,3985},
+
+};
+int rowsize = 4;
+int column = 6;
+
+int ans = findMinIn2DArray(arr, rowsize, column);
+cout<<"Maximum Value is = "<<ans;
+
+
+
+return 0;
+}
+*/
+
+/*row wise add
+void rowWiseSum(int shiv[3][3], int row ,int col){
+
+    for(int k=0; k<row; k++){
+        int sum = 0;
+        for(int j=0; j<col; j++){
+
+
+
+                sum+= shiv[k][j];
+
+
+        }
+        cout<<"Sum of row "<< k+1 << " is = "<<sum<<endl;
+
+    }
+
+}
+int main(){
+
+int shiv[3][3] = {
+    {10, 20, 30},
+    {40,50, 60},
+    {70, 80, 90},
+};
+
+int rowsize = 3;
+int colsize = 3;
+
+
+rowWiseSum(shiv, rowsize, colsize);
+
+return 0;
+}
+
+*/
+/*column wise sum
+void colWiseSum(int shiv[3][3], int row ,int col){
+
+for(int k=0; k<row; k++){
+        int sum = 0;
+        for(int j=0; j<col; j++){
+
+
+
+        sum+= shiv[j][k];
+
+
+        }
+        cout<<"Sum of col "<< k+1 << " is = "<<sum<<endl;
+
+    }
+
+}
+int main(){
+
+int shiv[3][3] = {
+    {10, 20, 30},
+    {40,50, 60},
+    {70, 80, 90},
+};
+
+int rowsize = 3;
+int colsize = 3;
+
+
+colWiseSum(shiv, rowsize, colsize);
+
+return 0;
+}
+*/
+
+/*Diagonal Sum in 2D array
+
+
+void diagonalSum(int shiv[3][3], int row ,int col){
+    int sum = 0;
+    for(int k=0; k<row; k++){
+
+        for(int j=0; j<col; j++){
+
+
+        if(j==k)
+                sum+= shiv[j][k];
+
+
+        }
+
+
+    }
+    cout<<"Sum of diagonal is = "<<sum<<endl;
+
+}
+int main(){
+
+int shiv[3][3] = {
+    {100, 20, 30},
+    {40,50, 60},
+    {70, 80, 90},
+};
+
+int rowsize = 3;
+int colsize = 3;
+
+
+diagonalSum(shiv, rowsize, colsize);
+
+return 0;
+
+}
+*/
+/*Sum of other diagonal element
+int main(){
+
+int array1[3][3] = {
+    {10, 20, 30},
+    {110, 120, 130},
+    {210, 220, 230},
+};
+
+
+
+int i =0;
+int sum = 0;
+    for(int j = 2; j>=0; j--) {
+
+
+        sum += array1[i][j];
+        i++;
+    }
+    cout<<sum;
+    return 0;
+}
+*/
+
+/*Row to column
+void rowToColumn(int arr[][3], int row , int col){
+
+ //int shiv[100][100] = {0};
+ vector<vector<int>>shiv(50,vector<int>(30,0));
+ for(int i = 0; i<row; ++i){
+    for(int j = 0; j<col; ++j){
+        shiv[i][j] = arr[j][i];
+        }
+    }
+    for(int i = 0; i<row; ++i){
+        for(int j = 0; j<col; ++j){
+             cout<<shiv[i][j]<<" ";
+            }cout<<endl;
+        }
+
+
+        //vector<vector<int>> arr(7, vector<int>(7,35));
+    }
+
+    int main (){
+
+
+    int arr[3][3] = {
+        {10, 20, 30},
+        {110, 120, 130},
+        {210, 220, 230},
+    };
+    int rowsize = 3;
+    int colsize = 3;
+
+    rowToColumn(arr, rowsize, colsize);
+
+
+    return 0;
+}
+*/
+/*Row to column by swap method
+int main (){
+
+vector<vector<int>>shiv = {
+        {10, 20, 30},
+        {110, 120, 130},
+        {210, 220, 230},
+    };
+
+    int row = 3;
+    int col = 3;
+    for(int i = 0 ; i<row; i++){
+        for(int j = i; j<col; j++){
+            swap(shiv[i][j],shiv[j][i]);
+        }
+    }
+
+     for(int i = 0 ; i<row; i++){
+        for(int j = 0; j<col; j++){
+            cout<<shiv[i][j]<<" ";
+        }cout<<endl;
+    }
+
+
+
+    return 0;
+}
+*/
+
+// Debug Exercise
+
+/*Q.1 Debug Exercise
+
+//
+#include<iostream>
+using namespace std;
+
+int main(){
+    int n, sum;  //int sum = 0;
+    cin >> n;
+    int input[n];
+    for(int i=0;i<n;i++){
+        cin >> input[0];  //input[i]
+    }
+     for(int i=0; i<n; i++){
+         sum = sum + input[i];
+     }
+    cout << sum << endl;
+    return 0;
+}
+//
+
+int main(){
+    int n;
+    int sum = 0;
+    cout<<"Give the total number of element : ";
+    cin >> n;
+    int input[n];
+    for(int i=0;i<n;i++){
+        cout<<"Give the value of "<<i<<" index  element : ";
+        cin >> input[i];
+    }
+     for(int i=0; i<n; i++){
+         sum = sum + input[i];
+     }
+    cout<<"Sum of all element is : "<< sum << endl;
+
+    return 0;
+}
+*/
+
+/*Q.2 Debug Exercise
+//
+void linearSearch(int arr[], int n ,int val){
+    for(int i=0;i<n;i++){
+        if(arr[i]==val){
+            return;
+        }
+    }
+    return;
+}
+//
+
+void linearSearch(int arr[], int n ,int val){
+    for(int i=0;i<n;i++){
+        if(arr[i]==val){
+            return i;
+        }
+    }
+    return -1;
+
+}
+*/
+
+/*Debug the code. Your task is to populate the 
+array using the integer values in the range 1 to N (both inclusive) 
+in the order - 1,3,5,.......,6,4,2
+
+//
+// void populate(int arr[], int n)
+// {
+//     int j = 0;
+//     for (int i = 0; i < n; i = i + 2)
+//     {
+        
+//         arr[n - j ] = i + 2; // arr[n-j-1]
+//         arr[j] = i + 1;
+//         j++;  
+//     }
+// }
+//
+
+void populate(int arr[], int n)
+{
+    int j = 0;
+    for (int i = 0; i < n; i = i + 2)
+    {
+        
+        arr[n - j - 1] = i + 2;
+        arr[j] = i + 1;
+        j++;  
+    }
+
+    for(int k = 0; k<n; k++){
+        cout<<arr[k]<<" ";
+    }
+}
+
+int main(){
+int arr[20]  = {1,2,3,4,5,6,7,8,9,10,12,13,14,15,16,17,18,19,20};
+int n = 20;
+populate(arr, n);
+    return 0;
+}
+*/
+
+
+
+/*
+4.Debug the code.
+
+void swapAlternate(int arr[],int size){
+    for(int i=0;i<size;i=i+2){
+        int temp = arr[i];
+         arr[i+1] = arr[i]; // arr[i] = arr[i+1]
+        arr[i] = temp;  //arr[i+1];
+    }
+    for(int j = 0; j<size; j++){
+        cout<<arr[j]<<" ";
+    }
+}
+
+
+
+void swapAlternate(int arr[],int size){
+    for(int i=0;i<size;i=i+2){
+        int temp = arr[i];
+        arr[i] = arr[i+1];
+        arr[i+1] = temp;
+    }
+    for(int j = 0; j<size; j++){
+        cout<<arr[j]<<" ";
+    }
+}
+int main (){
+int arr[20]  = {1,2,3,4,5,6,7,8,9,10,12,13,14,15,16,17,18,19,20};
+int size = 20;
+swapAlternate(arr, size);
+
+    return 0;
+
+}
+*/
+
+
+
+/*Q.5 Debug the code. List all pairs in array that sums to X.
+
+int pairSumToX(int input[], int size, int x){
+	 int pairs = 0;
+	for(int i=0; i<size; i++){
+		for(int j=i+1; j<size; j++){
+			if(input[i] + input[j] == x)pairs++;
+		}
+	}
+	return pairs;
+}
+int main (){
+int arr[10] = {1,2,3,4,7,8,9,9,2,9,};
+int n = 10;
+int target = 15;
+int ans = pairSumToX(arr, n, target);
+cout<<ans;
+    return 0;
+}
+*/
+
+
+
+/*Q.6 Debug the code. List all triplets in array that sums to X.
+
+int tripletSumToX(int input[], int size, int x){
+	int triplets = 0;
+	for(int i=0; i<size; i++){
+		for(int j=i+1; j<size; j++){ 
+			for(int k=j+1; k<size; k++){
+				if(input[i] + input[j] + input[k] == x) triplets++;
+			}
+		}
+	}
+	return triplets;
+}
+*/
+
+/*
+
+7.Debug the code. Sort 0s and 1s
+void sort0sand1s(int input[], int size){
+	int nextZero = 0;
+	for(int i=0; i<size; i++){
+		if(input[i] == 0){
+			int temp = input[nextZero];
+			input[nextZero] = input[i];
+			input[i] = temp;
+            nextZero++;
+		}
+	}
+}
+*/
